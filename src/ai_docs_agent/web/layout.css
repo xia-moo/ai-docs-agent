@@ -1,0 +1,13 @@
+/* Keep settings visible while the document list scrolls independently. */
+.sidebar{overflow:hidden}
+.brand,.local-label,.side-heading,.upload-zone,.side-note,.job-message,.rebuild,.sidebar-bottom{flex-shrink:0}
+.document-list{flex:1;min-height:80px;overflow-y:auto}
+.sidebar-bottom{margin-top:0}
+.welcome{margin:18px 0}
+.welcome h1{font-size:38px;line-height:1.4;margin:14px 0}
+.welcome p{margin:0}
+.welcome-stats{margin:20px 0}
+.suggestions{grid-template-columns:repeat(3,minmax(0,1fr));max-width:100%}
+.suggestions button{font-size:10px;line-height:1.6;gap:8px}
+@media(max-width:720px){.sidebar{height:auto;overflow-y:auto}.document-list{flex:none;min-height:0;max-height:100px;overflow-y:auto}.sidebar-bottom{display:block;border:0;padding:0}.index-status{display:none}.settings-button{padding:5px 0}}
+@media(max-width:720px){.welcome h1{font-size:30px}.suggestions{grid-template-columns:1fr}}

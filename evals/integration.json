@@ -1,0 +1,206 @@
+{
+  "checks": [
+    "four retrieval methods",
+    "PDF/MD corpus",
+    "query provenance",
+    "live configuration boundary",
+    "empty query",
+    "upload/ingest/query/delete"
+  ],
+  "health": {
+    "status": "ok",
+    "version": "1.0.0",
+    "index": {
+      "document_count": 7,
+      "chunk_count": 513,
+      "documents": [
+        {
+          "name": "attention_is_all_you_need.pdf",
+          "chunks": 160,
+          "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+          "source_url": "https://arxiv.org/abs/1706.03762"
+        },
+        {
+          "name": "chat_template_zh.md",
+          "chunks": 61,
+          "sha256": "7eb647bb5d63448a8d5af67020d43312567f4a8c03a6c52025d8224b4331fec9",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/chat_templating.md"
+        },
+        {
+          "name": "flagembedding.md",
+          "chunks": 95,
+          "sha256": "46500109787496a729e233c6a74ac5be2148a48108ad26e39e7de964dc0f5ca3",
+          "source_url": "https://github.com/FlagOpen/FlagEmbedding/blob/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md"
+        },
+        {
+          "name": "langgraph.md",
+          "chunks": 29,
+          "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+          "source_url": "https://github.com/langchain-ai/langgraph/blob/afbe7e48b17f62e139b5c6337ab934549e6dc73b/README.md"
+        },
+        {
+          "name": "pipeline_zh.md",
+          "chunks": 45,
+          "sha256": "6bf9e06834f9d9af4e384e4f6e3903b31d04371c5da68b0c8665f1b480a84e32",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/pipeline_tutorial.md"
+        },
+        {
+          "name": "preprocessing_zh.md",
+          "chunks": 65,
+          "sha256": "9aefcb2c0bd8a16c146c710d49ca382794cc35e4d0ec91a9f587882e22be5281",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md"
+        },
+        {
+          "name": "qdrant.md",
+          "chunks": 58,
+          "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4",
+          "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md"
+        }
+      ],
+      "revision": "1e5fa708b16b44af8ed28aa776e54e7d",
+      "built_at": "2026-10-13T10:45:27.549942+00:00",
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "chunk_size": 350,
+      "overlap": 60
+    },
+    "job": {
+      "id": "88e641730615465486da2ffcfa813607",
+      "status": "done",
+      "message": "索引已更新",
+      "result": {
+        "document_count": 7,
+        "chunk_count": 513,
+        "documents": [
+          {
+            "name": "attention_is_all_you_need.pdf",
+            "chunks": 160,
+            "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+            "source_url": "https://arxiv.org/abs/1706.03762"
+          },
+          {
+            "name": "chat_template_zh.md",
+            "chunks": 61,
+            "sha256": "7eb647bb5d63448a8d5af67020d43312567f4a8c03a6c52025d8224b4331fec9",
+            "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/chat_templating.md"
+          },
+          {
+            "name": "flagembedding.md",
+            "chunks": 95,
+            "sha256": "46500109787496a729e233c6a74ac5be2148a48108ad26e39e7de964dc0f5ca3",
+            "source_url": "https://github.com/FlagOpen/FlagEmbedding/blob/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md"
+          },
+          {
+            "name": "langgraph.md",
+            "chunks": 29,
+            "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+            "source_url": "https://github.com/langchain-ai/langgraph/blob/afbe7e48b17f62e139b5c6337ab934549e6dc73b/README.md"
+          },
+          {
+            "name": "pipeline_zh.md",
+            "chunks": 45,
+            "sha256": "6bf9e06834f9d9af4e384e4f6e3903b31d04371c5da68b0c8665f1b480a84e32",
+            "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/pipeline_tutorial.md"
+          },
+          {
+            "name": "preprocessing_zh.md",
+            "chunks": 65,
+            "sha256": "9aefcb2c0bd8a16c146c710d49ca382794cc35e4d0ec91a9f587882e22be5281",
+            "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md"
+          },
+          {
+            "name": "qdrant.md",
+            "chunks": 58,
+            "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4",
+            "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md"
+          }
+        ],
+        "revision": "1e5fa708b16b44af8ed28aa776e54e7d",
+        "built_at": "2026-10-13T10:45:27.549942+00:00",
+        "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "chunk_size": 350,
+        "overlap": 60
+      }
+    },
+    "providers": {
+      "llm_configured": false,
+      "search_configured": false,
+      "llm_base_url": "https://api.deepseek.com",
+      "llm_model": "deepseek-flash",
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "reranker_model": "BAAI/bge-reranker-base",
+      "answer_mode": "auto"
+    }
+  },
+  "sample_response": {
+    "question": "SMOKE_UPLOAD_CHECK",
+    "requested_route": "knowledge",
+    "route": "knowledge",
+    "method": "bm25",
+    "k": 3,
+    "candidates": 20,
+    "answer_mode": "auto",
+    "sources": [
+      {
+        "id": "be12792634232648288c30112744ca07",
+        "text": "SMOKE_UPLOAD_CHECK 独立测试标记。上传文档后可以检索并追溯来源。",
+        "source": "api-smoke-fixture.txt",
+        "section": "正文",
+        "page": null,
+        "line_start": 1,
+        "line_end": 1,
+        "start": 0,
+        "end": 41,
+        "source_url": null,
+        "score": 8.35021328383821,
+        "retrieval_method": "bm25"
+      }
+    ],
+    "answer": "原文摘录（尚未由生成模型综合回答）：\n\n[1] SMOKE_UPLOAD_CHECK 独立测试标记。上传文档后可以检索并追溯来源。",
+    "citations": [
+      {
+        "id": "be12792634232648288c30112744ca07",
+        "text": "SMOKE_UPLOAD_CHECK 独立测试标记。上传文档后可以检索并追溯来源。",
+        "source": "api-smoke-fixture.txt",
+        "section": "正文",
+        "page": null,
+        "line_start": 1,
+        "line_end": 1,
+        "start": 0,
+        "end": 41,
+        "source_url": null,
+        "score": 8.35021328383821,
+        "retrieval_method": "bm25",
+        "number": 1
+      }
+    ],
+    "status": "ok",
+    "mode": "extractive",
+    "sufficient": true,
+    "retrieval_ms": 0.71,
+    "trace": [
+      {
+        "node": "路由",
+        "detail": "选择知识库",
+        "latency_ms": 0.0
+      },
+      {
+        "node": "知识库检索",
+        "detail": "bm25，召回 1 个片段",
+        "latency_ms": 0.72
+      },
+      {
+        "node": "证据判断",
+        "detail": "候选片段存在词汇匹配，充分性尚未由模型验证。",
+        "latency_ms": 1.46
+      },
+      {
+        "node": "组织回答",
+        "detail": "extractive",
+        "latency_ms": 1.17
+      }
+    ],
+    "warnings": [],
+    "latency_ms": 4.85,
+    "revision": "3ba9628f6bb245c9a6732949d237dd1b"
+  }
+}

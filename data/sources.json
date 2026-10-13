@@ -1,0 +1,56 @@
+{
+  "langgraph.md": {
+    "repo": "langchain-ai/langgraph",
+    "revision": "afbe7e48b17f62e139b5c6337ab934549e6dc73b",
+    "url": "https://github.com/langchain-ai/langgraph/blob/afbe7e48b17f62e139b5c6337ab934549e6dc73b/README.md",
+    "download_url": "https://raw.githubusercontent.com/langchain-ai/langgraph/afbe7e48b17f62e139b5c6337ab934549e6dc73b/README.md",
+    "commit_date": "2026-10-12T22:57:04Z",
+    "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933"
+  },
+  "qdrant.md": {
+    "repo": "qdrant/qdrant",
+    "revision": "016542aa5deb6c66380bb137badf73d54f742bde",
+    "url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md",
+    "download_url": "https://raw.githubusercontent.com/qdrant/qdrant/016542aa5deb6c66380bb137badf73d54f742bde/README.md",
+    "commit_date": "2026-10-05T10:03:16Z",
+    "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4"
+  },
+  "flagembedding.md": {
+    "repo": "FlagOpen/FlagEmbedding",
+    "revision": "fd1a2bdf69488ffebe0327999d4400d8c8058a0b",
+    "url": "https://github.com/FlagOpen/FlagEmbedding/blob/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md",
+    "download_url": "https://raw.githubusercontent.com/FlagOpen/FlagEmbedding/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md",
+    "commit_date": "2026-08-24T02:54:09Z",
+    "sha256": "46500109787496a729e233c6a74ac5be2148a48108ad26e39e7de964dc0f5ca3"
+  },
+  "pipeline_zh.md": {
+    "repo": "huggingface/transformers",
+    "revision": "3f4af1700b1f06123e5acc0856509698b2628aa7",
+    "url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/pipeline_tutorial.md",
+    "download_url": "https://raw.githubusercontent.com/huggingface/transformers/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/pipeline_tutorial.md",
+    "commit_date": "2026-10-13T10:21:09Z",
+    "sha256": "6bf9e06834f9d9af4e384e4f6e3903b31d04371c5da68b0c8665f1b480a84e32"
+  },
+  "preprocessing_zh.md": {
+    "repo": "huggingface/transformers",
+    "revision": "3f4af1700b1f06123e5acc0856509698b2628aa7",
+    "url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md",
+    "download_url": "https://raw.githubusercontent.com/huggingface/transformers/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md",
+    "commit_date": "2026-10-13T10:21:09Z",
+    "sha256": "9aefcb2c0bd8a16c146c710d49ca382794cc35e4d0ec91a9f587882e22be5281"
+  },
+  "chat_template_zh.md": {
+    "repo": "huggingface/transformers",
+    "revision": "3f4af1700b1f06123e5acc0856509698b2628aa7",
+    "url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/chat_templating.md",
+    "download_url": "https://raw.githubusercontent.com/huggingface/transformers/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/chat_templating.md",
+    "commit_date": "2026-10-13T10:21:09Z",
+    "sha256": "7eb647bb5d63448a8d5af67020d43312567f4a8c03a6c52025d8224b4331fec9"
+  },
+  "attention_is_all_you_need.pdf": {
+    "url": "https://arxiv.org/abs/1706.03762",
+    "download_url": "https://arxiv.org/pdf/1706.03762v7",
+    "note": "Research paper used as local study material; do not republish the PDF as project code.",
+    "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "repository": "BAAI/bge-reranker-base",
+    "revision": "2cfc18c9415c912f9d8155881c133215df768a70",
+    "onnx_files": [
+      {
+        "name": "onnx/model.onnx",
+        "bytes": 1112459588,
+        "sha256": "15b9a8c3da82eddf263df571281166e00e9308fe19d077084b642ebfcaf06d2b"
+      }
+    ]
+  },
+  {
+    "repository": "qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q",
+    "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+    "onnx_files": [
+      {
+        "name": "model_optimized.onnx",
+        "bytes": 235052644,
+        "sha256": "634d0f66c29dc934c8fa72b8a4fe91dd4d420a22f1d82a241058d4316e659a99"
+      }
+    ],
+    "corpus_max_tokens": 203,
+    "chunks_over_512_tokens": 0
+  }
+]

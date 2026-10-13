@@ -1,0 +1,243 @@
+{
+  "health": {
+    "app": "ai-docs-agent",
+    "status": "ok",
+    "version": "1.0.0",
+    "index": {
+      "document_count": 7,
+      "chunk_count": 513,
+      "documents": [
+        {
+          "name": "attention_is_all_you_need.pdf",
+          "chunks": 160,
+          "sha256": "bdfaa68d8984f0dc02beaca527b76f207d99b666d31d1da728ee0728182df697",
+          "source_url": "https://arxiv.org/abs/1706.03762"
+        },
+        {
+          "name": "chat_template_zh.md",
+          "chunks": 61,
+          "sha256": "7eb647bb5d63448a8d5af67020d43312567f4a8c03a6c52025d8224b4331fec9",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/chat_templating.md"
+        },
+        {
+          "name": "flagembedding.md",
+          "chunks": 95,
+          "sha256": "46500109787496a729e233c6a74ac5be2148a48108ad26e39e7de964dc0f5ca3",
+          "source_url": "https://github.com/FlagOpen/FlagEmbedding/blob/fd1a2bdf69488ffebe0327999d4400d8c8058a0b/README.md"
+        },
+        {
+          "name": "langgraph.md",
+          "chunks": 29,
+          "sha256": "3a13e257af1216962d53d72414a7f44ac1fc5cea34d994bdff60ea2a3b045933",
+          "source_url": "https://github.com/langchain-ai/langgraph/blob/afbe7e48b17f62e139b5c6337ab934549e6dc73b/README.md"
+        },
+        {
+          "name": "pipeline_zh.md",
+          "chunks": 45,
+          "sha256": "6bf9e06834f9d9af4e384e4f6e3903b31d04371c5da68b0c8665f1b480a84e32",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/pipeline_tutorial.md"
+        },
+        {
+          "name": "preprocessing_zh.md",
+          "chunks": 65,
+          "sha256": "9aefcb2c0bd8a16c146c710d49ca382794cc35e4d0ec91a9f587882e22be5281",
+          "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md"
+        },
+        {
+          "name": "qdrant.md",
+          "chunks": 58,
+          "sha256": "f1455d12252bf40235ad0128d8e98b2cd6d42583e441ac832b01f4daf08df2e4",
+          "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md"
+        }
+      ],
+      "revision": "1e5fa708b16b44af8ed28aa776e54e7d",
+      "built_at": "2026-10-13T10:45:27.549942+00:00",
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "chunk_size": 350,
+      "overlap": 60
+    },
+    "job": null,
+    "providers": {
+      "llm_configured": false,
+      "search_configured": false,
+      "llm_base_url": "https://api.deepseek.com",
+      "llm_model": "deepseek-flash",
+      "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "reranker_model": "BAAI/bge-reranker-base",
+      "answer_mode": "auto"
+    }
+  },
+  "query": {
+    "question": "混合检索为什么使用 RRF？",
+    "requested_route": "auto",
+    "route": "knowledge",
+    "method": "rerank",
+    "k": 3,
+    "candidates": 20,
+    "answer_mode": "auto",
+    "sources": [
+      {
+        "id": "0693790046b8d2d1cbac596a4b0b187c",
+        "text": "### Hybrid Search\n\nCombine multiple vectors in a single query to get the best of semantic understanding and keyword precision, with results merged via configurable fusion strategies, such as Reciprocal Rank Fusion (RRF) and Distribution-Based Score Fusion (DBSF).\n\n",
+        "source": "qdrant.md",
+        "section": "Features / Hybrid Search",
+        "page": null,
+        "line_start": 139,
+        "line_end": 142,
+        "start": 8114,
+        "end": 8379,
+        "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md",
+        "score": 0.03131881575727918,
+        "retrieval_method": "rerank",
+        "rerank_score": 3.774959087371826
+      },
+      {
+        "id": "75306980eba4e4f255b452edaaa1b13d",
+        "text": "mg.permute(1, 2, 0))\n```\n\n<div class=\"flex justify-center\">\n    <img src=\"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png\"/>\n</div>\n\n<Tip>\n\n对于诸如目标检测、语义分割、实例分割和全景分割等任务，`ImageProcessor`提供了训练后处理方法。这些方法将模型的原始输出转换为有意义的预测，如边界框或分割地图。\n\n</Tip>\n\n",
+        "source": "preprocessing_zh.md",
+        "section": "预处理 / 计算机视觉",
+        "page": null,
+        "line_start": 417,
+        "line_end": 429,
+        "start": 14133,
+        "end": 14422,
+        "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md",
+        "score": 0.015873015873015872,
+        "retrieval_method": "rerank",
+        "rerank_score": -7.2270355224609375
+      },
+      {
+        "id": "acd8fb3045da1395d78dd24d916b9f37",
+        "text": "er, the first sequence transduction model based entirely on\nattention, replacing the recurrent layers most commonly used in encoder-decoder architectures with\nmulti-headed self-attention.\nFor translation tasks, the Transformer can be trained significantly faster than architectures based\non recurrent or convolutional layers.",
+        "source": "attention_is_all_you_need.pdf",
+        "section": "正文",
+        "page": 10,
+        "line_start": null,
+        "line_end": null,
+        "start": 1350,
+        "end": 1675,
+        "source_url": "https://arxiv.org/abs/1706.03762",
+        "score": 0.015625,
+        "retrieval_method": "rerank",
+        "rerank_score": -7.304224014282227
+      }
+    ],
+    "answer": "原文摘录（排名第一的候选片段，尚未由生成模型综合回答）：\n\n[1] ### Hybrid Search\n\nCombine multiple vectors in a single query to get the best of semantic understanding and keyword precision, with results merged via configurable fusion strategies, such as Reciprocal Rank Fusion (RRF) and Distribution-Based Score Fusion (DBSF).",
+    "citations": [
+      {
+        "id": "0693790046b8d2d1cbac596a4b0b187c",
+        "text": "### Hybrid Search\n\nCombine multiple vectors in a single query to get the best of semantic understanding and keyword precision, with results merged via configurable fusion strategies, such as Reciprocal Rank Fusion (RRF) and Distribution-Based Score Fusion (DBSF).\n\n",
+        "source": "qdrant.md",
+        "section": "Features / Hybrid Search",
+        "page": null,
+        "line_start": 139,
+        "line_end": 142,
+        "start": 8114,
+        "end": 8379,
+        "source_url": "https://github.com/qdrant/qdrant/blob/016542aa5deb6c66380bb137badf73d54f742bde/README.md",
+        "score": 0.03131881575727918,
+        "retrieval_method": "rerank",
+        "rerank_score": 3.774959087371826,
+        "number": 1
+      },
+      {
+        "id": "75306980eba4e4f255b452edaaa1b13d",
+        "text": "mg.permute(1, 2, 0))\n```\n\n<div class=\"flex justify-center\">\n    <img src=\"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/preprocessed_image.png\"/>\n</div>\n\n<Tip>\n\n对于诸如目标检测、语义分割、实例分割和全景分割等任务，`ImageProcessor`提供了训练后处理方法。这些方法将模型的原始输出转换为有意义的预测，如边界框或分割地图。\n\n</Tip>\n\n",
+        "source": "preprocessing_zh.md",
+        "section": "预处理 / 计算机视觉",
+        "page": null,
+        "line_start": 417,
+        "line_end": 429,
+        "start": 14133,
+        "end": 14422,
+        "source_url": "https://github.com/huggingface/transformers/blob/3f4af1700b1f06123e5acc0856509698b2628aa7/docs/source/zh/preprocessing.md",
+        "score": 0.015873015873015872,
+        "retrieval_method": "rerank",
+        "rerank_score": -7.2270355224609375,
+        "number": 2
+      },
+      {
+        "id": "acd8fb3045da1395d78dd24d916b9f37",
+        "text": "er, the first sequence transduction model based entirely on\nattention, replacing the recurrent layers most commonly used in encoder-decoder architectures with\nmulti-headed self-attention.\nFor translation tasks, the Transformer can be trained significantly faster than architectures based\non recurrent or convolutional layers.",
+        "source": "attention_is_all_you_need.pdf",
+        "section": "正文",
+        "page": 10,
+        "line_start": null,
+        "line_end": null,
+        "start": 1350,
+        "end": 1675,
+        "source_url": "https://arxiv.org/abs/1706.03762",
+        "score": 0.015625,
+        "retrieval_method": "rerank",
+        "rerank_score": -7.304224014282227,
+        "number": 3
+      }
+    ],
+    "status": "ok",
+    "mode": "extractive",
+    "sufficient": true,
+    "retrieval_ms": 4594.41,
+    "index_revision": "1e5fa708b16b44af8ed28aa776e54e7d",
+    "trace": [
+      {
+        "node": "路由",
+        "detail": "选择知识库",
+        "latency_ms": 0.12
+      },
+      {
+        "node": "知识库检索",
+        "detail": "rerank，召回 3 个片段",
+        "latency_ms": 4594.46
+      },
+      {
+        "node": "证据判断",
+        "detail": "候选片段存在词汇匹配，充分性尚未由模型验证。",
+        "latency_ms": 2.07
+      },
+      {
+        "node": "组织回答",
+        "detail": "extractive",
+        "latency_ms": 1.57
+      }
+    ],
+    "warnings": [],
+    "latency_ms": 4603.34,
+    "revision": "1e5fa708b16b44af8ed28aa776e54e7d"
+  },
+  "live": {
+    "question": "PyTorch 最新版本是多少？",
+    "requested_route": "auto",
+    "route": "web",
+    "method": "rerank",
+    "k": 5,
+    "candidates": 20,
+    "answer_mode": "auto",
+    "sources": [],
+    "answer": "没有找到可用证据。请调整问题、补充文档，或配置联网搜索。",
+    "citations": [],
+    "status": "needs_search_configuration",
+    "mode": "no_evidence",
+    "trace": [
+      {
+        "node": "路由",
+        "detail": "选择联网搜索",
+        "latency_ms": 0.01
+      },
+      {
+        "node": "联网搜索",
+        "detail": "缺少 API 配置，未发起外部请求。",
+        "latency_ms": 1.32
+      },
+      {
+        "node": "组织回答",
+        "detail": "no_evidence",
+        "latency_ms": 1.27
+      }
+    ],
+    "warnings": [
+      "请在设置中配置 Tavily API 密钥以使用联网搜索。"
+    ],
+    "latency_ms": 3.86,
+    "revision": "1e5fa708b16b44af8ed28aa776e54e7d"
+  }
+}

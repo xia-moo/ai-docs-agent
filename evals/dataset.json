@@ -1,0 +1,438 @@
+{
+  "index_revision": "1e5fa708b16b44af8ed28aa776e54e7d",
+  "questions": [
+    {
+      "id": "lg-durable",
+      "question": "LangGraph 如何在运行失败后从中断位置恢复？",
+      "source": "langgraph.md",
+      "evidence_quote": "automatically resuming from exactly where they left off",
+      "relevant_ids": [
+        "e76ebe71d0db547ac8e3357c39a97be3"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2157,
+          "end": 2425
+        }
+      ]
+    },
+    {
+      "id": "lg-human",
+      "question": "LangGraph 怎样让人检查并修改运行中的 agent state？",
+      "source": "langgraph.md",
+      "evidence_quote": "inspecting and modifying agent state",
+      "relevant_ids": [
+        "e76ebe71d0db547ac8e3357c39a97be3"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2157,
+          "end": 2425
+        }
+      ]
+    },
+    {
+      "id": "lg-memory",
+      "question": "LangGraph 的短期和长期记忆分别支持什么？",
+      "source": "langgraph.md",
+      "evidence_quote": "long-term persistent memory across sessions",
+      "relevant_ids": [
+        "bb0757eff65b0b249519d1826a44d52f",
+        "9068be873d3ae433037ac821a063af16"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2365,
+          "end": 2648
+        },
+        {
+          "page": null,
+          "start": 2588,
+          "end": 2887
+        }
+      ]
+    },
+    {
+      "id": "qd-payload",
+      "question": "Qdrant 中的 point 除了 vector 还可以包含什么？",
+      "source": "qdrant.md",
+      "evidence_quote": "vectors with an additional payload",
+      "relevant_ids": [
+        "e6a66ec3e2020fcc5ed170454f213537",
+        "ee8071730bbf77ee3974fbc1ad23739a"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 1549,
+          "end": 1742
+        },
+        {
+          "page": null,
+          "start": 1682,
+          "end": 1994
+        }
+      ]
+    },
+    {
+      "id": "qd-filter",
+      "question": "Qdrant payload filtering 可以组合哪些条件子句？",
+      "source": "qdrant.md",
+      "evidence_quote": "`should`, `must`, and `must_not`",
+      "relevant_ids": [
+        "59c1e91981f4d45496e79144b4ac7208"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 7874,
+          "end": 8114
+        }
+      ]
+    },
+    {
+      "id": "qd-fusion",
+      "question": "Qdrant hybrid search 支持 RRF 和哪些融合策略？",
+      "source": "qdrant.md",
+      "evidence_quote": "Reciprocal Rank Fusion (RRF)",
+      "relevant_ids": [
+        "0693790046b8d2d1cbac596a4b0b187c"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 8114,
+          "end": 8379
+        }
+      ]
+    },
+    {
+      "id": "bge-length",
+      "question": "BGE-M3 的输入长度最多支持多少 tokens？",
+      "source": "flagembedding.md",
+      "evidence_quote": "input length up to 8192",
+      "relevant_ids": [
+        "7545195dfc1a13b1bbd11b3b82271014",
+        "4bbf552ee3b8d268a910847cbdf07ce0"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 6156,
+          "end": 6506
+        },
+        {
+          "page": null,
+          "start": 6446,
+          "end": 6722
+        }
+      ]
+    },
+    {
+      "id": "bge-modes",
+      "question": "BGE-M3 支持哪些 dense、lexical 和多向量检索方式？",
+      "source": "flagembedding.md",
+      "evidence_quote": "unification of dense, lexical, multi-vec/colbert retrieval",
+      "relevant_ids": [
+        "4bbf552ee3b8d268a910847cbdf07ce0"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 6446,
+          "end": 6722
+        }
+      ]
+    },
+    {
+      "id": "bge-reranker",
+      "question": "bge-reranker-base 应该用于检索流程的哪个步骤？",
+      "source": "flagembedding.md",
+      "evidence_quote": "re-rank top-k documents returned by embedding models",
+      "relevant_ids": [
+        "c4cf190163a79bc3166fb08f85fdac9e",
+        "d66d1a65bd1641ca06c5b801ebcb3169"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 8179,
+          "end": 8493
+        },
+        {
+          "page": null,
+          "start": 8433,
+          "end": 8674
+        }
+      ]
+    },
+    {
+      "id": "hf-ids",
+      "question": "Tokenizer 返回的 input_ids 表示什么？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "是与句子中每个`token`对应的索引",
+      "relevant_ids": [
+        "e4f3b9d66025197173e37b8a64926fd2",
+        "fbd698f46396d6f502c9f40e78492c4f"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2244,
+          "end": 2561
+        },
+        {
+          "page": null,
+          "start": 2501,
+          "end": 2779
+        }
+      ]
+    },
+    {
+      "id": "hf-mask",
+      "question": "attention_mask 的用途是什么？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "指示是否应该关注一个`token`",
+      "relevant_ids": [
+        "fbd698f46396d6f502c9f40e78492c4f"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2501,
+          "end": 2779
+        }
+      ]
+    },
+    {
+      "id": "hf-padding",
+      "question": "padding=True 如何处理一个批次里不同长度的句子？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "批次中较短的序列填充到与最长序列相匹配的长度",
+      "relevant_ids": [
+        "01a5c5844cc00c0403c102a3c2ff6af4"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 3813,
+          "end": 4142
+        }
+      ]
+    },
+    {
+      "id": "hf-truncation",
+      "question": "truncation=True 会怎样处理超过模型长度的输入？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "将序列截断为模型接受的最大长度",
+      "relevant_ids": [
+        "3fca846a2221c143ea0643aeb8be938f"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 4929,
+          "end": 5207
+        }
+      ]
+    },
+    {
+      "id": "hf-tensors",
+      "question": "return_tensors 的 pt 和 tf 分别对应什么框架？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "设置为 `pt`",
+      "relevant_ids": [
+        "d8efdc12597ad930fb84e526a8a4fdb4"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 6052,
+          "end": 6333
+        }
+      ]
+    },
+    {
+      "id": "hf-decode",
+      "question": "怎样把 input_ids 解码回原始文本？",
+      "source": "preprocessing_zh.md",
+      "evidence_quote": "tokenizer.decode(encoded_input[\"input_ids\"])",
+      "relevant_ids": [
+        "fbd698f46396d6f502c9f40e78492c4f",
+        "4e1d2fa6ed8633af8fca799bed3d612d"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2501,
+          "end": 2779
+        },
+        {
+          "page": null,
+          "start": 2719,
+          "end": 3056
+        }
+      ]
+    },
+    {
+      "id": "pipe-device",
+      "question": "pipeline 中 device=n 的作用是什么？",
+      "source": "pipeline_zh.md",
+      "evidence_quote": "`pipeline`会自动将模型放在指定的设备上",
+      "relevant_ids": [
+        "cdc03a599b0dc7fa867384315c87e458"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 3326,
+          "end": 3656
+        }
+      ]
+    },
+    {
+      "id": "pipe-accelerate",
+      "question": "使用 device_map=auto 需要安装什么依赖？",
+      "source": "pipeline_zh.md",
+      "evidence_quote": "使用 `device_map` 参数需要安装",
+      "relevant_ids": [
+        "cdc03a599b0dc7fa867384315c87e458"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 3326,
+          "end": 3656
+        }
+      ]
+    },
+    {
+      "id": "pipe-batch",
+      "question": "怎样给 pipeline 配置 batch_size 为 2？",
+      "source": "pipeline_zh.md",
+      "evidence_quote": "batch_size=2",
+      "relevant_ids": [
+        "e16a857c6931dac3d12f8818e9a3e012",
+        "ed38f74e3a2cebf13d1828d33f13a15c"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 3897,
+          "end": 4164
+        },
+        {
+          "page": null,
+          "start": 4104,
+          "end": 4454
+        }
+      ]
+    },
+    {
+      "id": "chat-format",
+      "question": "消息列表应该交给 tokenizer 的哪个方法应用聊天模板？",
+      "source": "chat_template_zh.md",
+      "evidence_quote": "将其传递给[`~PreTrainedTokenizer.apply_chat_template`]方法",
+      "relevant_ids": [
+        "076f10e3da12f8f93f599274fbf1b162"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2472,
+          "end": 2816
+        }
+      ]
+    },
+    {
+      "id": "chat-prompt",
+      "question": "聊天模型预测时如何添加 generation prompt？",
+      "source": "chat_template_zh.md",
+      "evidence_quote": "添加[generation prompt]",
+      "relevant_ids": [
+        "076f10e3da12f8f93f599274fbf1b162"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 2472,
+          "end": 2816
+        }
+      ]
+    },
+    {
+      "id": "chat-training",
+      "question": "训练时 add_generation_prompt 应该设置为 True 还是 False？",
+      "source": "chat_template_zh.md",
+      "evidence_quote": "通常应该设置`add_generation_prompt=False`",
+      "relevant_ids": [
+        "7b4eb284c9ca19cca3821a5adbedba77"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 6579,
+          "end": 6891
+        }
+      ]
+    },
+    {
+      "id": "chat-custom",
+      "question": "如何替换 tokenizer 使用的 chat_template？",
+      "source": "chat_template_zh.md",
+      "evidence_quote": "设置`tokenizer.chat_template`属性",
+      "relevant_ids": [
+        "71cb539c5e733682da9494495b657a03",
+        "bfcae114206bdcf27b202b9c99c893d3"
+      ],
+      "locations": [
+        {
+          "page": null,
+          "start": 9837,
+          "end": 10161
+        },
+        {
+          "page": null,
+          "start": 10101,
+          "end": 10449
+        }
+      ]
+    },
+    {
+      "id": "paper-architecture",
+      "question": "Transformer 的架构是否需要 recurrence 和 convolutions？",
+      "source": "attention_is_all_you_need.pdf",
+      "evidence_quote": "dispensing with recurrence and convolutions entirely",
+      "relevant_ids": [
+        "5b2825230fa56bda4176607dfc4825e2"
+      ],
+      "locations": [
+        {
+          "page": 1,
+          "start": 781,
+          "end": 1063
+        }
+      ]
+    },
+    {
+      "id": "paper-heads",
+      "question": "multi-head attention 为什么使用不同的 representation subspaces？",
+      "source": "attention_is_all_you_need.pdf",
+      "evidence_quote": "jointly attend to information",
+      "relevant_ids": [
+        "96319bbe5b04cfa9cee5b5f31722e000"
+      ],
+      "locations": [
+        {
+          "page": 5,
+          "start": 0,
+          "end": 310
+        }
+      ]
+    }
+  ],
+  "labeling": "Authored source-span positives resolved before retrieval measurement; development set, not independently adjudicated."
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI Docs Agent · 技术文档知识库</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/layout.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/"><span class="brand-mark">A<span>i</span></span><span>AI Docs Agent<small>技术文档知识库</small></span></a>
+    <div class="local-label"><span class="dot"></span> 本地工作空间 <span class="version">v1.0</span></div>
+    <div class="side-heading">文档库 <span id="doc-count">0</span></div>
+    <label class="upload-zone" id="upload-zone" for="file-input">
+      <span class="upload-icon">↑</span><strong>添加参考文档</strong><small>拖入或点击上传 · PDF / MD / TXT</small>
+      <input id="file-input" type="file" accept=".pdf,.md,.txt" multiple hidden>
+    </label>
+    <p class="side-note">单个文件最大 10 MB，上传后自动建立索引。</p>
+    <div id="job-message" class="job-message" role="status"></div>
+    <div id="document-list" class="document-list"></div>
+    <button id="rebuild" class="secondary rebuild">↻ 重新建立索引</button>
+    <div class="sidebar-bottom">
+      <div id="index-status" class="index-status">正在连接工作空间…</div>
+      <button id="open-settings" class="settings-button">⚙ 模型与搜索设置 <span>›</span></button>
+    </div>
+  </aside>
+  <main>
+    <header class="topbar">
+      <nav aria-label="主导航"><button class="nav-button active" data-view="chat">知识库问答</button><button class="nav-button" data-view="evaluation">检索评测</button></nav>
+      <div class="top-actions"><span id="model-status" class="status-pill">连接中</span><a href="/docs" target="_blank" rel="noopener">API 文档 ↗</a></div>
+    </header>
+    <section id="chat-view" class="view chat-view">
+      <div id="conversation" class="conversation" aria-live="polite">
+        <div id="welcome" class="welcome">
+          <div class="eyebrow">RETRIEVE · REASON · REFERENCE</div>
+          <h1>从技术文档里，<br>找到有依据的答案<span>。</span></h1>
+          <p>检索你的文档与论文，查看每一段回答的来源。<br>让知识库回答知识问题，让联网搜索补充实时信息。</p>
+          <div class="welcome-stats"><span><strong id="welcome-docs">0</strong> 份文档</span><span><strong id="welcome-chunks">0</strong> 个片段</span><span><strong>4</strong> 种检索方式</span></div>
+          <div class="suggestions"><button data-question="LangGraph 如何保存状态并恢复运行？">LangGraph 如何保存状态？ <span>↗</span></button><button data-question="混合检索为什么使用 RRF？">混合检索为什么使用 RRF？ <span>↗</span></button><button data-question="Tokenizer 中 padding 与 truncation 有什么区别？">padding 与 truncation 的区别？ <span>↗</span></button></div>
+        </div>
+      </div>
+      <div class="composer-wrap">
+        <form id="question-form" class="composer">
+          <textarea id="question" rows="2" maxlength="2000" placeholder="输入你的技术问题，例如：LangGraph 的 checkpoint 有什么作用？" aria-label="问题" required></textarea>
+          <div class="composer-bottom"><div class="query-options">
+            <label>检索 <select id="method"><option value="rerank">混合 + 重排序</option><option value="hybrid">混合检索（RRF）</option><option value="dense">向量检索</option><option value="bm25">BM25</option></select></label>
+            <label>来源 <select id="route"><option value="auto">自动选择</option><option value="knowledge">仅知识库</option><option value="web">联网搜索</option></select></label>
+            <label>片段 <select id="top-k"><option>3</option><option selected>5</option><option>8</option></select></label>
+          </div><button id="ask" class="primary" type="submit">提问 <span>↑</span></button></div>
+        </form>
+        <p id="answer-note" class="answer-note">正在读取配置…</p>
+      </div>
+    </section>
+    <section id="evaluation-view" class="view evaluation-view" hidden>
+      <div class="eyebrow">MEASURE BEFORE YOU CLAIM</div><h1>检索评测</h1><p class="subtitle">用相同的问题和人工标注，对比不同检索方法的命中、排名与耗时。</p>
+      <div id="evaluation-content"></div>
+    </section>
+  </main>
+  <dialog id="settings-dialog">
+    <form id="settings-form">
+      <div class="dialog-heading"><h2>模型与搜索设置</h2><button id="close-settings" type="button" aria-label="关闭">×</button></div>
+      <p>配置保存在这台电脑的 <code>.env</code> 文件中。密钥不会出现在回答或状态接口里。</p>
+      <label>模型 API 地址<input id="llm-base" type="url" required placeholder="https://api.deepseek.com"></label>
+      <label>模型名称<input id="llm-model" required placeholder="deepseek-flash"></label>
+      <label>模型 API 密钥 <span id="llm-key-status"></span><input id="llm-key" type="password" autocomplete="off" placeholder="填写新密钥；留空则保留现有配置"></label>
+      <label>Tavily 搜索密钥 <span id="tavily-key-status"></span><input id="tavily-key" type="password" autocomplete="off" placeholder="启用实时问题的联网搜索"></label>
+      <label>回答方式<select id="answer-mode"><option value="auto">自动：有模型配置时生成回答，否则展示原文</option><option value="extractive">仅展示原文摘录</option><option value="llm">使用模型生成回答</option></select></label>
+      <p id="settings-message" role="status"></p><button class="primary" type="submit">保存设置</button>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

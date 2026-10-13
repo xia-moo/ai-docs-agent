@@ -1,0 +1,10 @@
+name: AIDocsAgent_py312
+channels:
+  - defaults
+dependencies:
+  - python=3.12.15
+  - pip
+  - pip:
+      - -r requirements-lock.txt
+      - -e .
+
